@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -61,6 +62,11 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
+				},
+				chat: {
+					user: '#3b82f6',
+					ai: '#1e293b',
+					loading: '#9b87f5',
 				}
 			},
 			borderRadius: {
@@ -84,11 +90,43 @@ export default {
 					to: {
 						height: '0'
 					}
-				}
+				},
+				'pulse': {
+					'0%, 100%': { opacity: '1' },
+					'50%': { opacity: '0.5' }
+				},
+				'gradient-animation': {
+					'0%': { backgroundPosition: '0% 50%' },
+					'50%': { backgroundPosition: '100% 50%' },
+					'100%': { backgroundPosition: '0% 50%' }
+				},
+				'typing': {
+					'0%': { width: '0%' },
+					'100%': { width: '100%' }
+				},
+				'typing-dot': {
+					'0%, 60%, 100%': { opacity: '0' },
+					'30%': { opacity: '1' }
+				},
+				'fade-in': {
+					'0%': { opacity: '0', transform: 'translateY(10px)' },
+					'100%': { opacity: '1', transform: 'translateY(0)' }
+				},
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'pulse': 'pulse 1.5s ease-in-out infinite',
+				'gradient-animation': 'gradient-animation 15s ease infinite',
+				'typing': 'typing 1.5s steps(30, end)',
+				'typing-dot-1': 'typing-dot 1.5s infinite 0.5s',
+				'typing-dot-2': 'typing-dot 1.5s infinite 0.75s',
+				'typing-dot-3': 'typing-dot 1.5s infinite 1s',
+				'fade-in': 'fade-in 0.3s ease-out',
+			},
+			backgroundImage: {
+				'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
+				'gradient-conic': 'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
 			}
 		}
 	},
