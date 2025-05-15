@@ -67,9 +67,9 @@ const Index: React.FC = () => {
 
   return (
     <div className="flex flex-col h-screen w-full bg-gradient">
-      <header className="sticky top-0 z-10 neo-blur border-b border-foreground/10">
+      <header className="sticky top-0 z-10 neo-blur border-b border-foreground/5">
         <div className="container flex justify-center py-4">
-          <h1 className="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-primary via-purple-400 to-blue-400">
+          <h1 className="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-foreground/80 via-foreground/70 to-foreground/90">
             EzChat
           </h1>
         </div>

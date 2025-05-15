@@ -90,11 +90,11 @@
   }
   
   .neo-blur {
-    @apply backdrop-blur-2xl bg-background/90 border border-foreground/10;
+    @apply backdrop-blur-2xl bg-background/70 border border-foreground/10;
   }
   
   .bg-gradient {
-    background: linear-gradient(135deg, #1e1e2e 0%, #232342 25%, #2b2551 50%, #331d5c 75%, #3b1667 100%);
+    background: linear-gradient(135deg, #000000 0%, #0a1022 25%, #101835 50%, #172045 75%, #1e2756 100%);
     background-size: 200% 200%;
     animation: gradientShift 15s ease infinite;
   }
