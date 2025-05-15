@@ -66,16 +66,16 @@ const Index: React.FC = () => {
   };
 
   return (
-    <div className="flex flex-col min-h-screen dark gradient-bg">
+    <div className="flex flex-col h-screen w-full bg-gradient">
       <header className="sticky top-0 z-10 neo-blur border-b border-foreground/10">
         <div className="container flex justify-center py-4">
-          <h1 className="text-xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-primary to-blue-400">
-            AI Chat Interface
+          <h1 className="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-primary via-purple-400 to-blue-400">
+            EzChat
           </h1>
         </div>
       </header>
 
-      <main className="flex-1 container max-w-4xl flex flex-col">
+      <main className="flex-1 w-full max-w-screen-xl mx-auto flex flex-col overflow-hidden">
         <ChatContainer 
           messages={chatState.messages} 
           isLoading={chatState.isLoading} 

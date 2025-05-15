@@ -43,17 +43,17 @@ const MessageInput: React.FC<MessageInputProps> = ({ onSendMessage, isLoading })
   }, [message]);
 
   return (
-    <div className="sticky bottom-0 w-full px-2 pb-4 pt-2">
+    <div className="sticky bottom-0 w-full px-4 py-4">
       <form 
         onSubmit={handleSubmit}
-        className="neo-blur rounded-2xl flex items-end relative"
+        className="neo-blur rounded-2xl flex items-end relative max-w-4xl mx-auto w-full ring-1 ring-primary/20 hover:ring-primary/30 transition-all duration-300"
       >
         <textarea
           ref={textareaRef}
           value={message}
           onChange={(e) => setMessage(e.target.value)}
           onKeyDown={handleKeyDown}
-          placeholder="Type your message..."
+          placeholder="Message EzChat..."
           rows={1}
           disabled={isLoading}
           className={cn(
@@ -70,8 +70,8 @@ const MessageInput: React.FC<MessageInputProps> = ({ onSendMessage, isLoading })
             "absolute right-3 bottom-3 p-2 rounded-full", 
             "bg-primary text-primary-foreground",
             "disabled:opacity-50 disabled:cursor-not-allowed",
-            "transition-all duration-300",
-            !message.trim() || isLoading ? "opacity-50" : "hover:shadow-[0_0_8px_rgba(255,255,255,0.4)]"
+            "transition-all duration-300 hover:scale-105",
+            !message.trim() || isLoading ? "opacity-50" : "hover:shadow-[0_0_12px_rgba(155,135,245,0.5)]"
           )}
         >
           <ArrowUp className="h-5 w-5" />

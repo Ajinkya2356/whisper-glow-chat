@@ -93,9 +93,23 @@
     @apply backdrop-blur-2xl bg-background/90 border border-foreground/10;
   }
   
-  .gradient-bg {
-    background: linear-gradient(125deg, #1A1F2C, #222b42, #2a2a44);
-    background-size: 400% 400%;
-    @apply animate-gradient-animation;
+  .bg-gradient {
+    background: linear-gradient(90deg, #1a1f2c 0%, #222b42 50%, #2b2d44 100%);
+    background-size: 200% 200%;
+    animation: gradientShift 15s ease infinite;
+  }
+  
+  @keyframes gradientShift {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
   }
 }
+
+/* ... keep existing code (other utility styles) */

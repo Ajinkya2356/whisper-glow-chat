@@ -21,13 +21,13 @@ const ChatContainer: React.FC<ChatContainerProps> = ({ messages, isLoading }) =>
   }, [messages, isLoading]);
 
   return (
-    <div className="flex-1 overflow-y-auto py-4 px-4 space-y-6">
+    <div className="flex-1 overflow-y-auto py-4 px-4 space-y-6 w-full">
       {messages.length === 0 ? (
         <div className="flex items-center justify-center h-full">
-          <div className="text-center p-8 rounded-xl glass-morphism">
-            <h2 className="text-2xl font-bold mb-2">Welcome to AI Chat</h2>
+          <div className="text-center p-8 rounded-xl glass-morphism max-w-md w-full">
+            <h2 className="text-2xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-primary via-purple-400 to-blue-400">Welcome to EzChat</h2>
             <p className="text-foreground/70">
-              Start a conversation with the AI by typing a message below.
+              Start a conversation with the AI by typing a message below. Ask questions, get creative responses, or just chat!
             </p>
           </div>
         </div>
